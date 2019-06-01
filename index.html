@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casa de jogos</title>
+</head>
+<body>
+<style>
+#boneco{
+	width: 27px;
+	height: 47px;
+	background-image: url(img/boneco.png);
+}
+#boneco.baixo{
+	background-position: 0px 0px ;
+}
+#boneco.baixo1{
+	background-position: -30px 0px ;
+}
+#boneco.baixo2{
+	background-position: -97px 0px ;
+}
+#boneco.direita{
+	background-position: 0px -96px ;
+}
+#boneco.direita1{
+	background-position: -32px -96px ;
+}
+#boneco.direita2{
+	background-position: -96px -96px ;
+}
+#boneco.esquerda{
+	background-position: 0px -49px ;
+}
+#boneco.esquerda1{
+	background-position: -34px -49px ;
+}
+#boneco.esquerda2{
+	background-position: -98px -49px ;
+}
+#boneco.cima{
+	background-position: 0px -142px ;
+}
+#boneco.cima1{
+	background-position: -31px -142px ;
+}
+#boneco.cima2{
+	background-position: -96px -142px ;
+}
+</style>
+<div id="boneco" class=""></div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>
+	$(document).on('keypress',function(evento){
+		var tecla=evento.keyCode;
+		//alert(tecla);//
+		
+			if(tecla == 100){
+				limpar();
+				$('#boneco').addClass('direita');
+			}else if(tecla==97){
+				limpar();
+				$('#boneco').addClass('esquerda');
+			}else if(tecla==115){
+				limpar();
+				$('#boneco').addClass('baixo');
+			}else if(tecla==119){
+				limpar();
+				$('#boneco').addClass('cima');
+			}
+	 });
+	function limpar(){
+		$('#boneco').removeClass('direita');
+		$('#boneco').removeClass('esquerda');
+		$('#boneco').removeClass('cima');
+		$('#boneco').removeClass('baixo');
+	}
+	function direita{
+		$('#boneco').addClass('direita');
+		setTimeout(function(){
+			$('#boneco')
+		})
+		$('#boneco').addClass('direita1');
+		$('#boneco').addClass('direita');
+		$('#boneco').addClass('direita2');
+	}
+
+</script>
+</body>
+</html>
